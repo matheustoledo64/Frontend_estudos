@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeuPrimeiroScript</title>
+    <style>
+        body {
+            font: normal 20pt Times;
+            background-color: rgb(68, 155, 133);
+            color:rgb(0, 0, 0);
+            margin: 30px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        div#horas {
+            margin-left: auto;
+            margin-right: auto;
+            width: 2.5em;
+            margin-top: 25px;
+            font-size: 40px;
+            color: rgb(23, 23, 121);
+        }
+        p#bomdia {
+            text-align: center;
+            font: normal 25px arial;
+            color: rgb(28, 43, 90);
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            margin-top: 30px;
+        }
+        div#txt {
+            margin-top: 30px;
+            font-size: 45px;
+            text-align: center;
+            }
+        div#result {
+            margin-top: 20px}
+        div#bloco {
+            background-color: rgba(241, 241, 241, 0.747);
+            writing-mode: horizontal-tb;
+            width: 570px;
+            height:570px;
+            margin-top: 150px;
+            border-radius: 20px;
+            position: absolute;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 10px 10px 10px rgb(49, 49, 49);
+        }
+    </style>
+</head>
+<body>
+    <p> Site do</p><h1><strong>TOLEDO</strong></h1>
+    <!--<input type="number" id="n1"> + <input type="number" id="n2">
+    <input type="button" value="Somar" style= 'background-color:rgb(255, 173, 66)' onclick="soma()">
+    <div id='result'></div>-->
+    <div id="bloco"><strong><div id="txt">Hora do Dia</div><div id="horas"></div><img src="1-green_fire.png" alt=""><p id="bomdia">Olá</p></div>
+    <script>
+        var tempo = new Date()
+        var hora = tempo.getHours()
+        var min = tempo.getMinutes()
+        if (hora < 10) {
+            document.getElementById('horas').innerHTML = '0'+hora + ':' + min
+            if (min < 10) {
+                document.getElementById('horas').innerHTML = hora + ':' + '0'+min}} 
+        else {
+            document.getElementById('horas').innerHTML = hora + ':' + min
+            if (min < 10) {
+                document.getElementById('horas').innerHTML = hora + ':' + '0'+min}}
+        
+        if (hora < 12 ) {
+            document.getElementById('bomdia').innerHTML = 'Bom dia'
+            document.body.style.background = 'rgb(218,205,91)';}
+        else if (hora > 12 && hora < 18) {
+            document.getElementById('bomdia').innerHTML = 'Boa Tarde'
+            document.body.style.background = 'rgb(245,151,44)';}
+        else if (hora >= 18 ) {
+            document.getElementById('bomdia').innerHTML = 'Boa Noite'
+            document.body.style.background = 'rgb(44,44,44)';}
+
+        
+        /*function soma() {
+            var n1 = Number(window.document.getElementById('n1').value)
+            var n2 = Number(window.document.getElementById("n2").value)
+            var s = n1 + n2
+            window.document.getElementById('result').innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s}<strong/>`
+        }*/
+    </script> 
+</body>
+</html>

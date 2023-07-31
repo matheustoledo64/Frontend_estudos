@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGAR CP</title>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <style>
+        body {
+            background-color: rgb(27, 171, 255);
+        }
+        #voltar {
+            margin-top: 50px;
+            font-size: 40px;
+            margin-left: 30px;
+            margin-top: 20px;
+            padding: 12px;
+            padding-bottom: 20px;
+            text-align: center;
+            font-weight: bolder;
+            border-radius: 18px;
+            height: 30px;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            width: 40px;
+            background-image: linear-gradient(aquamarine,rgb(49, 206, 133));
+            text-decoration: none;
+            display: block;
+            border: solid 2px white;
+            box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.322);
+        }
+        #plaza {
+            width: 900px;
+            display: block;
+            margin-left: 18%;
+            margin-right: auto;
+            border: solid 2px black;
+            margin-top: -12px;
+            position: absolute;
+        }
+        #pinguim {
+            margin-top: 300px;
+            margin-left: 560px;
+            position: relative;
+            width: 80px;
+            outline: none;
+        }
+    </style>
+    <a href="index.html" id="voltar">&lt;</a>
+    <section>
+        <img id="plaza" src="https://preview.redd.it/f3ewuumi55x51.jpg?width=600&format=pjpg&auto=webp&s=ca1562f22f18b5f55c915b1517ecc3f9fbdc9ef2" alt="">
+        <video src="Club Penguin Dance Green Screen.mp4" id="pinguim" loop></video>
+    </section>
+    <script>
+        //da trabalho demais pra fazer chroma key no js então deixei 
+        // pra la, nao é meu foco
+        document.addEventListener('keypress',a => {
+            if (event.key == 'd'){
+                document.getElementById('pinguim').currentTime = 0
+                document.getElementById('pinguim').play()
+            }}
+        )
+        document.addEventListener('keypress', c => {
+            if (event.key =='n') {
+                document.getElementById('pinguim').currentTime = 0
+                document.getElementById('pinguim').pause()
+            }
+        })
+        document.addEventListener('keypress', b => {
+            if (event.key =='Esc'){
+                document.getElementById('voltar').click()
+            }
+        })
+    </script>
+</body>
+</html>

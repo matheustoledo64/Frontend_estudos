@@ -1,0 +1,75 @@
+@charset "URF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;700;800&display=swap');
+body {
+    background-image: url(https://pbs.twimg.com/media/FO_r_dDWYAIQ7wT.jpg:large);
+    background-size: cover;
+    background-position: 27%;
+    background-attachment: fixed;
+}
+main {
+    font-size: 20px;
+    font-family: 'Kanit';
+    background-color: rgba(255, 255, 255, 0.918);
+    margin: auto;
+    width: 330px;
+    height: 300px;
+    margin-top: 5%;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    min-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, 0.199);
+}
+button {
+    height: 52px;
+    width: 96px;
+    font-size: 20px;
+    background-color: rgb(134, 236, 202);
+    margin-left: 5px;
+    border-color: rgba(0, 0, 0, 0.815);
+    border-style: solid;
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.322);
+    border-radius: 8px;
+    transition-duration: 0.45s;
+}
+#escuro:hover {
+    background-image: none;
+    background-color: rgb(58, 58, 58);
+}
+button:hover {
+    background-image: linear-gradient(rgb(134, 236, 202),rgba(134, 236, 222, 0.87),rgb(152, 197, 226));
+    cursor: pointer;
+    margin-left: 5px;
+    height: 57px;
+    width: 102px;
+}
+#tempo {
+    font-family: 'Roboto Mono', monospace;
+}
+#cronometro {
+    font-family: 'Roboto Mono', monospace;
+}
+.icons {
+    width: 32px;
+    position: absolute;
+    margin-left: 6px;
+}
+.txtcaixa {
+    position: relative;
+    font-family: 'Kanit', monospace;
+    font-weight: normal;
+    font-size: 0.9em;
+    text-shadow: rgba(77, 77, 77, 0.363) 2px 3px 2px;
+}
+#escuro{
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    border-radius: 50%;
+    background-color: rgb(58, 58, 58);
+    margin-left: 90%;
+    margin-top: -75px;
+    margin-bottom: -20px;
+}

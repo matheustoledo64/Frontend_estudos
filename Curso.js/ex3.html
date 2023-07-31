@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador Idade</title>
+    <style>
+        body {
+            background-image: url(yellow_submarine_perfect_shot.png);
+            background-size: 85%;
+            border: 10px ;
+            margin-top: 40px;
+            
+        }
+        section {
+            text-align: center;
+            margin: auto;
+            padding: 15px;
+            width: 600px;
+            background-color: azure;
+            border-radius: 10px 10px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.589);
+            font-size: 18px;
+            font: normal Arial;
+        }
+        input#Identificar {
+            margin: 15px;
+            color: blue;}
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div><h2>Identificador de Idade</h2></div>
+        <div id="txtano">Ano de nascimento: <input id='idade' type="number" max="2023" min="0"></div>
+        <br>
+        <input type="radio" name="sexo">
+        <label id="msc">Masculino</label>
+        <input type="radio" name="sexo">
+        <label id="fem">Feminino</label>
+        <br>
+        <input id='Identificar'type="button" value="Identificar" onclick="calcular()">
+        <p id="suaidade"><p>
+        <div id="a"><div>
+
+    </section>
+
+    <script>
+        function calcular() {
+            var idade = 2023 - Number(document.getElementById('idade').value)
+            var img = document.createElement('img')
+            img.setAttribute('id', 'imagem')
+            if (idade === 2023) {
+                window.alert('erro, voce nao digitou nenhum valor')}
+            else {
+                if (document.getElementsByName('sexo')[0].checked) {
+                    var sexo = 'homem'
+                    img.setAttribute('src', 'gigachad.jpg')
+                    document.getElementById('a').appendChild(img)}
+                else {
+                    var sexo = 'mulher'
+                    img.setAttribute('src', 'anadearmas.png')
+                    document.getElementById('a').appendChild(img)
+                    }
+                document.getElementById('suaidade').innerHTML = `Você possui ${idade} anos! E é ${sexo}`
+            }
+        }
+    </script>
+</body>
+</html>

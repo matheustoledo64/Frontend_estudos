@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <style>
+        body {
+            background-image: url('Curso.js/luigis.jpg');
+            background-size: cover;
+            background-position: top;
+            font: normal arial;
+        }
+        header {
+            background-color: rgba(162, 211, 255, 0.664);
+            text-align: center;
+            font-size: 30px;
+            width: 300px;
+            border-radius: 10px 10px 10px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 10px;
+            box-shadow:8px 8px rgba(0, 0, 0, 0.185);
+            
+        }
+        section {
+            background-color: rgba(240, 248, 255, 0.664);
+            margin: auto;
+            border-radius: 10px 10px 10px;
+            padding: 30px;
+            width: 800px;
+            margin-top: 20px;
+            box-shadow: 8px 8px rgba(0, 0, 0, 0.185);
+            margin-bottom: 50px;
+        }
+        input#tarefa {
+            background-color: rgb(216, 216, 216);
+            border-radius: 20px 20px 20px;
+            padding: 9.5px 15px;
+            width: 590px;
+            font-weight: bolder;
+            font-size: 15px;
+            outline: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input#add{
+            color: white;
+            background-color: cadetblue;
+            padding: 10px;
+            border-radius: 10px 10px 10px;
+            margin-left: 10px;
+            font-family: 'Gill Sans MT';
+            font-weight: bold;
+        }
+        div {
+            font-size: 25px;
+            margin-top: 18px;
+            font-weight: bold;
+            font-style: Arial;
+        }
+        input#chek {
+            height: 18px;
+            width: 18px;
+        }
+        input#apaga {
+            border-radius: 25px ;
+            font-weight: bolder;
+            color: rgba(0, 0, 0, 0.555);
+            background-color: rgba(255, 255, 255, 0.788);
+        }
+    </style>
+    <header><strong>Lista de Tarefas</strong></header>
+    <br>
+    <section id="sec">
+        <input id='tarefa' type="text" placeholder="Digite sua tarefa" required> <input id='add'type="button" value="Adicionar" onclick="adicionar()" onkeydown="enter">
+        <br>
+    </section>
+    <script>
+        var tarefas = []
+        for(var cont=0;tarefas.length!=cont;cont++) {
+            tarefas[cont] = {check:'',tarefa:'',apaga:''}
+            tarefas[cont].check = document.getElementById('chek')
+            tarefas[cont].apaga = document.getElementById('apaga')
+            tarefas[cont].tarefa = document.getElementById('tarefa')
+            
+        }
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                adicionar()}} )
+        function adicionar() {
+            let tarefa = ''
+            let divtarefa = document.createElement('div')
+            let check = document.createElement('input')
+            let apaga = document.createElement('input')
+            apaga.setAttribute('type','button')
+            apaga.setAttribute('value','X')
+            apaga.setAttribute('id','apaga')
+            apaga.setAttribute('onclick','apagar()')
+            check.setAttribute('type','checkbox')
+            check.setAttribute('id','chek')
+            divtarefa.appendChild(check)
+            tarefa = document.getElementById('tarefa').value
+            if (tarefa == '') {
+                window.alert('digite algo...')
+            }
+            else {
+            divtarefa.appendChild(document.createTextNode(` ➤ ${tarefa} `))
+            document.getElementById('sec').appendChild(divtarefa)
+            tarefas.push(divtarefa)
+            divtarefa.appendChild(apaga)
+            
+            }
+            console.log(tarefas[0])
+            console.log(tarefas[1])
+        }
+        function apagar() {
+            
+        }
+        /* NÃO CONSEGUI FAZER A FUNÇÃO DE APAGAR A TAREFA, MINHA LÓGICA FOI QUEBRADA
+        E NÃO DÁ PRA FAZER DE OUTRA FORMA(que envolve conhecimento que ainda 
+        não aprendi) PORÉM FOI UM BOM EXERCICIO PRA PRATICAR E ME AJUDOU
+        MUITO, UM DIA IREI REFAZÊ-LO DE FORMA BEM COMPLETA*/
+        
+    </script>
+</body>
+</html>

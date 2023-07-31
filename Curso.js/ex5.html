@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: darkgreen;
+            background-image: linear-gradient(to right,blue, orange);
+        }
+        section {
+            background-color: aliceblue;
+            border-radius: 10px 10px 10px;
+            padding: 30px;
+            width: 500px;
+            margin-top: 50px;
+            margin: auto;
+            font-size: 25px;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 35px;
+        }
+    </style>
+    <h1>TABUADA</h1>
+    <section>
+        <div>Número: <input id='num' type="number"> <input type="button" value="Mostrar" onclick="calculo()"></div>
+        <br>
+        <div id="res"></div>
+        <select id='option' size="10"></select>
+    </section>
+    <script>
+        function calculo() {
+            var n = Number(document.getElementById('num').value)
+            var cont = 1
+            document.getElementById('res').innerHTML = ''
+            document.getElementById('option').innerText =''
+            while (cont <= 10){
+                document.getElementById('res').innerHTML += `${n} X ${cont} = ${n*cont}`
+                document.getElementById('res').innerHTML += '<br>'
+                let opt = document.createElement('option')
+                opt.innerText =`${n} X ${cont} = ${n*cont}`
+                document.getElementById('option').appendChild(opt)
+                cont++
+            }
+        }
+    </script>
+</body>
+</html>

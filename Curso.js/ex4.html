@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: rgb(42, 85, 34);
+            background-image: url('Tree.png') ;
+            background-size: 700px;
+        }
+        img {
+            margin-top: 195px;
+            width: 350px;
+            height: 350px;
+            display: inline-block;}
+        img#tree2 {
+            margin-top: 10px;
+            width: 350px;
+            height: 350px;
+        }
+        section{
+            background-color: aliceblue;
+            border-radius: 10px 10px 10px;
+            box-shadow: rgba(0, 0, 0, 0.596);
+            text-align: center;
+            font-size: 24px;
+            padding: 15px;
+            margin: auto;
+            margin-top: 40px;
+            width: 700px;
+        }
+        p {
+            font-size: 25px;
+        }
+        div {
+            font-size: 20px;
+            margin-top: 13px;
+        }
+    </style>
+    <section>
+        <strong><h1>Contador<h1></strong>
+        <div>De: <input type="number" id="de"><div>
+        <div>Até: <input type="number" id="ate"></div>
+        <div>Passo: <input type="number" id="passo"></div>
+        <div><input type="button" value="Contar" onclick="calculo()"><div>
+        <div id="res">Contagem:<div>
+    </section>
+    <script>
+        function calculo() {
+            let de = Number(document.getElementById('de').value)
+            let ate = Number(document.getElementById('ate').value)
+            let passo = Number(document.getElementById('passo').value)
+            if (passo <= 0) {
+                window.alert('passo inválido bobão')
+                passo = 1
+            }
+            let res = document.getElementById('res')
+            for (let a=de;a <= ate;a = a + passo) {
+                if (a != ate) {
+                    res.innerHTML += `${a} >`}
+                else {
+                    res.innerHTML += `${a}`
+                }
+            }
+        }
+    </script>
+</body>
+</html>

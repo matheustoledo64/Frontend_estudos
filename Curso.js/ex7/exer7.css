@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(65, 65, 65);
+}
+header {
+    text-align: center;
+    font: 100px;
+    margin: 20px;
+    color: white;
+}
+section {
+    background-color: aliceblue;
+    border-radius: 10px 10px 10px;
+    padding: 50px;
+    width: 600px;
+    margin-top: 50px;
+    margin: auto;
+    font-size: 20px;
+}

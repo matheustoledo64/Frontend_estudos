@@ -1,0 +1,9 @@
+[
+    {"nome":"matheus",
+    "idade":17,
+    "programador":true},
+    {"nome":"thomas",
+    "idade":20,
+    "programador":false
+    }
+]

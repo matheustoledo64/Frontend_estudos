@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando flexbox</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: rgb(51, 64, 75);
+            color: aliceblue;
+        }
+        .container {
+            background-color: rgb(50, 52, 53);
+            width: 260px;
+            height: 260px;
+            border: solid aquamarine;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .item {
+            margin: 15px;
+            font: 26px bolder;
+
+        }
+    </style>
+    <h1> Testando flexbox</h1>
+    <div class="container">
+        <p class="item">1</p>
+        <p class="item">2</p>
+        <p class="item">3</p>
+        <p class="item">4</p>
+    </div>
+</body>
+</html>

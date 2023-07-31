@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando HTML</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: rgb(211, 235, 255);
+        }
+        picture {
+            align-self: center;
+        }
+    </style>
+    <h1>Treinando HTML</h1>
+    <h2>Vamos começar</h2>
+    <abbr style="background-color: aquamarine;" title="hyper text markup language">HTML</abbr> É SOBRE <strong>SEMANTICA</strong> <i>LEMBRE-SE</i>
+        <h3>Lista ordenada</h3>
+        <ol>
+            <li><a href="http://pudim.com.br/" target="_blank" >link foda</a></li>
+            <li><a href="../listatarefas.html">outro link foda mas é pro meu site ta ligado</a></li>
+        </ol>
+        <h3>Lista não ordenada</h3>
+        <ul>
+            <li><code>isso é uma linha em code</code></li>
+            <li><q cite="Toledo">isso é uma citação</q></li>
+            <li><blockquote cite="Toledo">esse daqui é blockquote, eu acho bem daora também</blockquote></li>
+        </ul>
+        <p>Aqui vamos testar imagens dinamicas no html<br>
+(imagens que se adaptam de acordo com o tamanho da tela)</p>
+        <p>esse site já tá meio cheio bora treinar outras coisas <a href="treinando2.html">aqui</a></p>
+        <picture>
+            <source media="(max-width:720px)" srcset="img_pequeno.jpg" type="image/jpg">
+            <source media="(max-width:1020px)" srcset="img_media.jpg" type="image/jpg">
+            <img src="img_grande.jpg" alt="">
+        </picture>
+</body>
+</html>
