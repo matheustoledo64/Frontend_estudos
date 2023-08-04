@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+:root {
+    --font1: 'Passion One', cursive;
+    --font2: Verdana, Geneva, Tahoma, sans-serif;
+    --font3: 'Sriracha', cursive;
+}
+body {
+    
+}
+footer {
+    padding: 5px;
+    margin: 20px -8px -10px -8px;
+    background-color: black;
+}
+footer > p {
+    text-align: center;
+    color:white;
+    margin: 4px 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: var(--font2);
+}
+h1 {
+    font-family: var(--font1);
+    font-size: 9.3vw;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font2);
+}
+a:hover {
+    text-decoration: dotted;
+}
+section {
+    margin: 80px 60px;
+    margin-left: 25px;
+}
+p{
+    font-family: var(--font3);
+    font-style: italic;
+    line-height: 7vw;
+    font-weight: 600;
+    font-size: 3vw;
+    margin: 55px 0px;
+}
+header {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 18px;
+    margin: -8px -8px 0px -8px;
+    display: flex;
+    flex-direction: column;
+}
+header > p {
+    margin: 5px;
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: var(--font2);
+    font-style: normal;
+}
+footer > p {
+    margin: 0px;
+    font-size: 3vw;
+    font-weight: normal;
+    font-family: var(--font2);
+    font-style: normal;
+
+}
+#img1{
+    background-image: url(pacote-d012/imagens/background001.jpg);
+}
+#img2{
+    background-image: url(pacote-d012/imagens/background002.jpg);
+}
+.paralax {
+    background: black right center no-repeat fixed;
+    background-size: cover;
+    margin: 20px -8px 20px -8px;
+    padding: 10px;
+    border: solid 10px black;
+}
+.paralax > p {
+    background-color: rgba(18, 18, 19, 0.658);
+    display: block;
+    color: white;
+    padding: 8px;
+    margin-right: none;
+}
