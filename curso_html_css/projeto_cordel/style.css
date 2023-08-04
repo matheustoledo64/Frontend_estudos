@@ -8,7 +8,7 @@ body {
     
 }
 footer {
-    padding: 5px;
+    padding: 15px;
     margin: 20px -8px -10px -8px;
     background-color: black;
 }
@@ -25,6 +25,7 @@ h1 {
     font-size: 9.3vw;
     margin-bottom: 0px;
     margin-top: 50px;
+    font-variant: small-caps;
 }
 a {
     font-weight: bold;
@@ -33,7 +34,7 @@ a {
     font-family: var(--font2);
 }
 a:hover {
-    text-decoration: dotted;
+    text-decoration: underline;
 }
 section {
     margin: 80px 60px;
@@ -66,11 +67,11 @@ header > p {
 }
 footer > p {
     margin: 0px;
-    font-size: 3vw;
+    font-size: 1em;
     font-weight: normal;
     font-family: var(--font2);
     font-style: normal;
-
+    line-height: normal;
 }
 #img1{
     background-image: url(pacote-d012/imagens/background001.jpg);
@@ -83,12 +84,13 @@ footer > p {
     background-size: cover;
     margin: 20px -8px 20px -8px;
     padding: 10px;
-    border: solid 10px black;
+    box-shadow: inset 0px 0px 20px 3px black;
 }
 .paralax > p {
     background-color: rgba(18, 18, 19, 0.658);
     display: block;
     color: white;
+    text-shadow: 2px 3px 2px black;
     padding: 8px;
-    margin-right: none;
+    width: 40vw;
 }
