@@ -7,16 +7,64 @@
 </head>
 <body>
     <style>
-        td {
+        td,th {
             border: solid 1px black;
-            padding: 5px;
+            padding: 10px;
         }
         table {
             border-collapse: collapse;
+            margin: 8px;
+            width: 400px;
+            font-family: arial;
+            box-shadow: 5px 5px  5px rgba(0, 0, 0, 0.151);
+            position:relative;
+
+        }
+        thead{
+            background-color: rgb(255, 212, 70);
+        }
+        tfoot {
+            background-color: rgb(148, 218, 197);
+        }
+        tbody > tr:nth-child(2n) {
+            -background-color: rgb(221, 221, 221);
+        }
+        .habitantes {
+            text-align: right;
+        }
+        thead > tr > th {
+            position:sticky;
+            top:-1px;
+            background-color: yellow;
+        }
+        .mesclado {
+            text-align: center;
+        }
+        .mesclado > .destaque  > tbody > tr:nth-child(2n) {
+            background-color: rgb(71, 71, 71);
+        }
+        .destaque {
+            background-color: rgb(71, 71, 71);
+            color: white;
+        }
+        .c1 {
+            background-color: aquamarine ;
+        }
+        div#container {
+            overflow-x: auto;
+        }
+        table#ultima {
+            width: 1300px;
         }
     </style>
-    <table>
+    <table> 
+        <colgroup>
+             <col class="c1">
+             <col>
+             <col>   
+        </colgroup>
         <tr>
+
             <td>a1</td>
             <td>b1</td>
             <td>c1</td>
@@ -32,5 +80,191 @@
             <td>c3</td>
         </tr>
     </table>
+    <table>
+        <thead>
+            <tr>
+               <th scope="col">Estado</th>
+               <th scope="col">Habitantes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="habitantes">44 420 459</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="habitantes">20 538 718</td>
+            </tr>
+            <tr>
+                <td>Rio De janeiro</td>
+                <td class="habitantes">16 054 524</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="habitantes">14 136 417</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="habitantes">11 443 208</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td scope="row"><strong>Total:</strong></td>
+                <td class="habitantes">200.000.000</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h1>mesclada agora em (desafio)</h1>
+    <table class="mesclado">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td colspan="3">8</td>
+            <td>9</td>
+
+        </tr>
+        <tr>            
+            <td rowspan="2">10</td>
+            <td colspan="2">11</td>
+            <td>12</td>
+        </tr>
+        <tr> 
+                        <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+    </table>
+    <table class="mesclado">
+        <tr>
+            <td colspan="4">A</td>
+            <td rowspan="4">B</td>
+        </tr>
+        <tr>
+            <td rowspan="4">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td colspan=4>N</td>
+        </tr>
+    </table>
+    <div class="container">
+    <table class="mesclado">
+        <tr class="destaque">
+            <th rowspan="2">area</th>
+            <th rowspan="2">disciplinas</th>
+            <th colspan="2">notas</th>
+            <th rowspan="2">media</th>
+        </tr>
+        <tr class="destaque">
+            <th>nota1</th>
+            <th>nota2</th>
+        </tr>
+        <tr>
+            <th rowspan="4">exatas</th>
+            <td>matematica</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <td>fisica</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <td>quimica</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <td>biologia</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr  class="destaque">
+            <th colspan="4">meida de exatas</th>
+            <th>0.0</th>
+        </tr>
+        <tr>
+            <th rowspan="2">humanas</th>
+            <td>histoira</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+
+        </tr>
+        <tr>
+            <td>geografia</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr class="destaque">
+            <th colspan="4">meida humanas</th>
+            <th>0.0</th>
+        </tr>
+    </table>
+    <div id="container">
+    <table id="ultima">
+        <tr>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+        <tr>
+            <td>aaaa</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+    </table></div>
+    <h1>teste</h1>
 </body>
 </html>
