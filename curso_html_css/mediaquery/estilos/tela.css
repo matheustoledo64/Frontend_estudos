@@ -1,0 +1,10 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+p {
+    text-align: justify;
+    width: 70vw;
+    margin: auto;
+    display: block;
+}

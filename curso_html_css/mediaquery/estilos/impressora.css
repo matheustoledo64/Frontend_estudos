@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+p {
+    text-align: justify;
+    width: 70vw;
+    font-style: italic;
+    color: red;
+    margin: auto;
+    display: block;
+}

@@ -1,0 +1,25 @@
+/*CONFIG GERAL*/
+body {
+    background-image: url(../mediaquery/imagens/back-phone.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main {
+    background-color: aliceblue;
+    border-radius: 8px ;
+    padding:5px;
+    text-align: center;
+    font-weight: bold;
+    width: 60vw;
+    margin: auto;
+}
+main > img{
+    margin: auto;
+}
+img#phone{display: none;}
+img#pc{display: none;}
+img#print{display: none;}
+img#tablet{display: none;}
+img#tv{display: none;}
