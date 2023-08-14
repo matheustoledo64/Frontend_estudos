@@ -1,0 +1,14 @@
+@media screen and (min-width:768px){
+    #ulmenu {display: none;}
+    #itens {
+        display: block;
+        text-align: left;
+        padding: 20px;
+    }
+    #itens > li {
+        display: inline;
+    }
+    article {
+        width: 60vw;
+    }
+}
