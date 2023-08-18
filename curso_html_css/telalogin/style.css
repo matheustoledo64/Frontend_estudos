@@ -1,0 +1,126 @@
+@charset "UTF-8";
+:root{
+    --roxo: #5f2c82;
+    --verde1: #53aaa7;
+    --verde2: #2d6462;
+    --verde3: #94cfcd;
+}
+body {
+    background-color: #5f2c82;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+section{
+    box-shadow: 0px 5px 13px 4px rgba(0, 0, 0, 0.548);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    width: 55vw;
+    font-weight: bold;
+    flex-wrap: wrap;
+    background-color: white;
+}
+h2 {
+    font-weight: bolder;
+    margin: 4px;
+    margin-top: 1px;
+}
+p{
+    font-size: 0.9em;
+    font-weight:normal;
+    display: block;
+}
+#foto{
+    background: #5f2c82 url(https://images.pexels.com/photos/1492232/pexels-photo-1492232.jpeg?cs=srgb&dl=pexels-soloman-soh-1492232.jpg&fm=jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+    height: 30vw;
+    width: 55vw;
+    border-radius: 6px 6px 0px 0px;
+}
+input {
+    border-color: lightgrey;
+    border-radius: 4px;
+    padding: 8px;
+    width: 33vw;
+    display: block;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: var(--verde3);
+}
+#login {
+    padding: 8px;
+}
+.espacoicon{
+    background-color: #5f2c82;
+    padding: 8px 3.5px 3.5px 8px;
+    border-radius: 5px;
+    margin: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+.espacoicon > input {
+    margin-bottom: 4px;
+    height: 20px;
+    outline: none;
+}
+.espacoicon > input:focus-within{
+    background-color: white;
+}
+input#botao{
+    background-color: var(--verde1);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 90%;
+    font-size:0.97em;
+}
+input#botao:hover{
+    background-color: var(--verde2);
+    cursor: pointer;
+}
+#botaosenha{
+    border: 1.9px solid var(--verde1);
+    color: var(--verde2);
+    padding: 12px;
+    padding-top: 7px;
+    width: 80%;
+    background-color: white;
+    font-size:0.9em;
+    margin-bottom: 20px;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#botaosenha:hover{
+    cursor: pointer;
+    background-color: var(--verde3);
+}
+.espacoicon > span {
+    font-size: 2.3em;
+    color: white;
+    margin-right: 8px;
+}
+a > #mail{
+    font-size: 1.4em;
+    text-align: end;
+}
