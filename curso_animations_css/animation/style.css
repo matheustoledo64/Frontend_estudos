@@ -1,0 +1,45 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    /*animation-name: one;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-fill-mode: both;*/
+    ianimation: one 3s ease-in 1s infinite alternate;
+}
+#oi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: arial;
+    font-size: xx-large;
+    font-weight: bold;
+    text-shadow: 2px 2px white;
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: -8px;
+    animation: imagem 2s ease-out 0s alternate;
+    background-image: url(https://s1.static.brasilescola.uol.com.br/be/2022/06/paisagem-natural-floresta.jpg);
+}
+h1{
+    animation: texto 1s ease-out 2.5s alternate both;
+    margin: 0px;
+}
+@keyframes one {
+    0%{ width: 200px; height: 200px; background-color: blue;}
+    50%{width:400px;height:300px; background-color:green;}
+    100%{ width: 100px;height: 400px;background-color: red;}
+}
+@keyframes imagem {
+    0%{width: 0px;}
+    100%{width: 100%;}
+}
+@keyframes texto {
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
