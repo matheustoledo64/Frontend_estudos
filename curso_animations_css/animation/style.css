@@ -1,4 +1,4 @@
-div{
+#one{
     width: 200px;
     height: 200px;
     background-color: blue;
@@ -8,7 +8,7 @@ div{
     animation-timing-function: ease-in;
     animation-direction: alternate;
     animation-fill-mode: both;*/
-    ianimation: one 3s ease-in 1s infinite alternate;
+    animation: transform 2s ease-out 0s infinite alternate;
 }
 #oi{
     display: flex;
@@ -23,7 +23,7 @@ div{
     background-repeat: no-repeat;
     background-size: cover;
     margin: -8px;
-    animation: imagem 2s ease-out 0s alternate;
+    animation: imagem 2s ease-in 0s alternate;
     background-image: url(https://s1.static.brasilescola.uol.com.br/be/2022/06/paisagem-natural-floresta.jpg);
 }
 h1{
@@ -35,6 +35,11 @@ h1{
     50%{width:400px;height:300px; background-color:green;}
     100%{ width: 100px;height: 400px;background-color: red;}
 }
+@keyframes transform {
+    from{background-color: blue;}
+    to{background-color:brown;
+    transform: scale(0.5,0.5) translate(50px,50px) rotate(45deg) skew(0deg,0deg);}
+}
 @keyframes imagem {
     0%{width: 0px;}
     100%{width: 100%;}
@@ -42,4 +47,24 @@ h1{
 @keyframes texto {
     from{opacity: 0%;}
     to{opacity: 100%;}
+}
+#verde{background-color: green;}
+#vermelho{background-color: red;}
+#laranja{background-color: orange;}
+#amarelo{background-color: yellow;}
+.quadrado {
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    animation: transformfinal 2s ease-in 1s 2 alternate forwards;
+    -webkit-animation: transformfinal 2s ease-in 1s 2 alternate forwards;
+    -ms-animation: transformfinal 2s ease-in 1s 2 alternate forwards;
+    -moz-animation: transformfinal 2s ease-in 1s 2 alternate forwards;
+    -o-animation: transformfinal 2s ease-in 1s 2 alternate forwards;
+}
+.two{
+    margin-top: 30px;
+}
+@keyframes transformfinal {
+    to{transform: translate(50vw,50vh) scaleX(10) skew(0deg,-80deg);}
 }
